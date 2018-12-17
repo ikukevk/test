@@ -1,6 +1,16 @@
 pipeline {
     agent any
     stages {
+        stage('Destroy') {
+            steps {
+                sh 'docker rmi $(docker images)'
+                sh 'docker stop $(docker ps -a -q)
+                sh 'docker rm $(docker ps -a -q)
+                sh 'docker system prune'
+            }
+        }
+    }
+    
         stage('Build') {
             steps {
                 sh 'docker build -t testing .'
