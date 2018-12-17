@@ -11,7 +11,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t testing .'
+                sh 'docker build -t testing https://github.com/ikukevk/test.git#develop'
+                
             }
         }
         stage('Deploy') {
