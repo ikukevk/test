@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Destroy') {
             steps {
+                sh  chmod 664 /var/run/docker.sock
                 sh 'docker stop $(docker ps -a -q) || true'
                 sh 'docker rm $(docker ps -a -q) || true'
                 sh 'docker rmi testing || true'
