@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Destroy') {
             steps {
-                sh 'docker stop $(docker ps -a -q)'
-                sh 'docker rm $(docker ps -a -q)'
-                sh 'docker rmi testing'
-                sh 'docker system prune'
+                sh 'docker stop $(docker ps -a -q) || true'
+                sh 'docker rm $(docker ps -a -q) || true'
+                sh 'docker rmi testing || true'
+                sh 'docker system prune || true'
             }
         }
         stage('Build') {
