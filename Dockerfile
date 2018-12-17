@@ -1,5 +1,5 @@
 # Build
-FROM node:slim as build-deps
+FROM node:latest
 WORKDIR /usr/src/app
 COPY package.json ./
 RUN npm i
