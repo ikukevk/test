@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Destroy') {
             steps {
-                sh 'docker rmi $(docker images)'
+                sh 'docker rmi testing'
                 sh 'docker stop $(docker ps -a -q)'
                 sh 'docker rm $(docker ps -a -q)'
                 sh 'docker system prune'
