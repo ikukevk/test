@@ -9,8 +9,6 @@ pipeline {
                 sh 'docker system prune'
             }
         }
-    }
-    
         stage('Build') {
             steps {
                 sh 'docker build -t testing .'
