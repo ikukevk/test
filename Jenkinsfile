@@ -4,8 +4,8 @@ pipeline {
         stage('Destroy') {
             steps {
                 sh 'docker rmi $(docker images)'
-                sh 'docker stop $(docker ps -a -q)
-                sh 'docker rm $(docker ps -a -q)
+                sh 'docker stop $(docker ps -a -q)'
+                sh 'docker rm $(docker ps -a -q)'
                 sh 'docker system prune'
             }
         }
