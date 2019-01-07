@@ -5,11 +5,4 @@ pipeline {
     sh 'ls -l groovy1.txt'
     sh 'cat groovy1.txt'
   }
-  stages {
-    stage('Build') {
-      steps {
-          sh 'echo TEST > .env'
-      }
-    }
-  }
 }
