@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
            sh 'touch test'
-       
+           sh "pwd"
       }
     }
   }
