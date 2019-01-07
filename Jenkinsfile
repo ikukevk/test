@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-           sh 'touch .env'
+           sh 'touch test'
        
       }
     }
