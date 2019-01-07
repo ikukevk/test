@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tages {
+  stages {
     stage('Build') {
       steps {
            writeFile file: '.env', text: "test"      
