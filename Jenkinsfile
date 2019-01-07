@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-           writeFile file: '.env', text: "test"      
+           sh 'touch .env'
+           sh 'echo 'test' .env'
       }
     }
   }
